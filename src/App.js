@@ -16,7 +16,7 @@ export default function App() {
     if (map.current) return; // initialize map only once
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/christopherlyon/cks0obxph564b18qgtd6sqhqz/draft",
       center: [lng, lat],
       zoom: zoom,
       pitch: pitch,
@@ -29,7 +29,7 @@ export default function App() {
         maxzoom: 14,
       });
       // add the DEM source as a terrain layer with exaggerated height
-      map.current.setTerrain({ source: "mapbox-dem", exaggeration: 2 });
+      map.current.setTerrain({ source: "mapbox-dem", exaggeration: 1.5 });
 
       // add a sky layer that will show when the map is highly pitched
       map.current.addLayer({
